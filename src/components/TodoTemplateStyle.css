@@ -1,0 +1,28 @@
+.todo-wrapper {
+    width: 500px;
+    margin: 200px auto;
+    border: 2px solid tomato;
+}
+.todo-wrapper-header {
+}
+.todo-wrapper-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.todo-wrapper-title button {
+    border: 0;
+    background: transparent;
+}
+
+.todo-wrapper-content {
+    border: 1px solid green;
+}
+
+/* Tabs */
+.todo-tabs-wrapper {
+    padding: 10px;
+}

@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+/* Common */
+button {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+button:focus, input:focus, textarea:focus {
+  outline: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* TodoWrapper */
+.todo-wrapper {
+  position: relative;
+  top: 200px;
+  left: 50%;
+  width: 400px;
+  height: 600px;
+  margin-left: -200px;
+  border: 2px solid tomato;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo-wrapper-header {
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-wrapper-title {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.todo-wrapper-title button {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.todo-wrapper-content {
+  padding: 10px;
+}
+
+/* Tabs */
+.todo-tabs-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* TodoItem */
+.item-wrapper {
+  background: teal;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.item-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.item-wrapper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-wrapper-title {
+  font-weight: bold;
+  color: white;
+}
+.item-wrapper-date {
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(255, 255, 255, .8);
+}
+
+.item-wrapper-content {
+  padding: 10px 0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Popover */
+.popover-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.popover-wrapper-container {
+  width: 80%;
+  padding: 20px;
+  border-radius: 2px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.color-picker {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.color-picker div {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  background: darkorange;
+}
+
+.popover-wrapper-container input {
+  border: 1px solid #eee;
+  width: calc(100% - 20px);
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+}
+
+.popover-wrapper-container textarea {
+  border: 1px solid #eee;
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.button-group button {
+  flex: 1;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid tomato;
+  margin-right: 5px;
+}
+.button-group button:last-child {
+  margin-right: 0;
 }
