@@ -5,13 +5,17 @@ const Popover = (props) => {
     const onSubmit = () => {
         console.log('submit')
     }
+    const colors = ['#ffcfcf', '#ffa5a5', '#5c969e', '#3d7ea6', '#fcf8ec', '#b1ccdb'];
+
     return(
         <>
             {open ? (
                 <div className="popover-wrapper">
                     <div className="popover-wrapper-container">
                         <div className="color-picker">
-                            <div />
+                            {colors.map((index) => (
+                                <div style={{background: index}}/>
+                            ))}
                         </div>
                         <input placeholder="제목을 입력하세요"/>
                         <textarea />

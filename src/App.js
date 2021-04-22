@@ -4,10 +4,9 @@ import './App.css'
 import TodoItemList from "./components/TodoItemList";
 
 function App() {
-
     return (
-        <TodoTemplate title="ToDo" children={<TodoItemList />} >
-
+        <TodoTemplate title="ToDo">
+            <TodoItemList />
         </TodoTemplate>
     );
 }

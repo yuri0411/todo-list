@@ -38,16 +38,26 @@ button:focus, input:focus, textarea:focus {
 }
 
 /* Tabs */
-.todo-tabs-wrapper {
+.tabs-wrapper {
   display: flex;
   justify-content: space-between;
   padding: 10px;
 }
-
+.tabs-wrapper-item {
+  cursor: pointer;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  color: #666;
+}
+.tabs-wrapper-item.active {
+  border-bottom: 2px solid tomato;
+  color: tomato;
+}
 /* TodoItem */
 .item-wrapper {
-  background: teal;
-  border-radius: 2px;
+  background: #b1ccdb;
+  border-radius: 4px;
   margin-bottom: 20px;
   padding: 10px;
 }
@@ -67,7 +77,7 @@ button:focus, input:focus, textarea:focus {
 .item-wrapper-date {
   font-weight: normal;
   font-size: 14px;
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, .9);
 }
 
 .item-wrapper-content {
@@ -90,15 +100,20 @@ button:focus, input:focus, textarea:focus {
 .popover-wrapper-container {
   width: 80%;
   padding: 20px;
-  border-radius: 2px;
+  border-radius: 4px;
   background: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popover-wrapper-container input {
+  margin-bottom: 10px;
 }
 
 .color-picker {
   display: flex;
   justify-content: space-between;
   padding: 5px 0;
+  margin-bottom: 10px;
 }
 
 .color-picker div {
@@ -107,7 +122,6 @@ button:focus, input:focus, textarea:focus {
   height: 25px;
   border: 1px solid #eee;
   border-radius: 50%;
-  background: darkorange;
 }
 
 .popover-wrapper-container input {
@@ -133,9 +147,31 @@ button:focus, input:focus, textarea:focus {
   flex: 1;
   height: 40px;
   line-height: 40px;
-  border: 1px solid tomato;
   margin-right: 5px;
+  background-color: #eee;
 }
 .button-group button:last-child {
   margin-right: 0;
+  background-color: tomato;
+  color: white;
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-wrapper-content {
+  position: absolute;
+  left: 50%;
+  width: 80px;
+  margin-left: -40px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-wrapper-content-item {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 14px;
 }

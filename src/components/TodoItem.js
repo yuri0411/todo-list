@@ -1,19 +1,18 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Dropdown from "./Dropdown";
 
-const TodoItem = ({ title, content }) => {
+const TodoItem = ({ id, title, content, date }) => {
     return(
         <div className="item-wrapper">
             <div className="item-wrapper-header">
                 <div className="item-wrapper-title">
-                    title
-                    <div className="item-wrapper-date">date</div>
+                    {title}
+                    <div className="item-wrapper-date">{date}</div>
                 </div>
-                <button>
-                    edit
-                </button>
+                <Dropdown />
             </div>
             <div className="item-wrapper-content">
-                content
+                {content}
             </div>
         </div>
     )
