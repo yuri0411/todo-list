@@ -11,7 +11,7 @@ button:focus, input:focus, textarea:focus {
 /* TodoWrapper */
 .todo-wrapper {
   position: relative;
-  top: 200px;
+  top: 100px;
   left: 50%;
   width: 400px;
   height: 600px;

@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
-import Dropdown from "./Dropdown";
+import React, { useState } from 'react'
+import Dropdown from './Dropdown'
 
 const TodoItem = ({ id, title, content, date }) => {
-    return(
+    return (
         <div className="item-wrapper">
             <div className="item-wrapper-header">
                 <div className="item-wrapper-title">
@@ -11,9 +11,7 @@ const TodoItem = ({ id, title, content, date }) => {
                 </div>
                 <Dropdown />
             </div>
-            <div className="item-wrapper-content">
-                {content}
-            </div>
+            <div className="item-wrapper-content">{content}</div>
         </div>
     )
 }
