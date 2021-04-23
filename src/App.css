@@ -13,6 +13,7 @@ button:focus, input:focus, textarea:focus {
   position: relative;
   top: 100px;
   left: 50%;
+  overflow: hidden;
   width: 400px;
   height: 600px;
   margin-left: -200px;
@@ -34,6 +35,8 @@ button:focus, input:focus, textarea:focus {
 }
 
 .todo-wrapper-content {
+  overflow: scroll;
+  height: 474px;
   padding: 10px;
 }
 
