@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import dayjs from 'dayjs'
+import Palette from './Palette'
 
 const date = dayjs('')
 
@@ -45,23 +46,19 @@ const Modal = props => {
         close(false)
         date.format('YYYY년MM월DD일')
     }
-
+    const onSelectColor = () => {
+        console.log('select color')
+    }
     return (
         <>
             {open ? (
                 <div className="popover-wrapper">
                     <div className="popover-wrapper-container">
-                        <div className="color-picker">
-                            {colors.map(index => (
-                                <div
-                                    key={index}
-                                    style={{
-                                        background: index,
-                                    }}
-                                    onClick={() => console.log(index)}
-                                />
-                            ))}
-                        </div>
+                        <Palette
+                            colors={colors}
+                            // select={color}
+                            onSelect={onSelectColor}
+                        />
                         <input
                             placeholder="제목을 입력하세요"
                             name="title"
