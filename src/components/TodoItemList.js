@@ -24,7 +24,7 @@ const TodoItemList = props => {
                     title={item.title}
                     content={item.content}
                     date={item.date}
-                    background={item.background}
+                    color={item.color}
                     setTodos={setTodos}
                 />
             ))}

@@ -3,7 +3,7 @@ import Tabs from './Tabs'
 import Modal from './Modal'
 import { MdAdd } from 'react-icons/md'
 
-const TodoTemplate = ({ title, children, setTodos, colors }) => {
+const TodoTemplate = ({ title, children, addTodo, colors }) => {
     const [modalOpen, setModalOpen] = useState(false)
     const openModal = () => {
         setModalOpen(true)
@@ -26,7 +26,7 @@ const TodoTemplate = ({ title, children, setTodos, colors }) => {
             <Modal
                 open={modalOpen}
                 close={closeModal}
-                setTodos={setTodos}
+                addTodo={addTodo}
                 colors={colors}
             />
         </main>

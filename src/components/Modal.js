@@ -3,13 +3,12 @@ import axios from 'axios'
 import dayjs from 'dayjs'
 import Palette from './Palette'
 
-const date = dayjs('')
-
 const Modal = props => {
-    const { open, close, setTodos, colors } = props
+    const { open, close, addTodo, colors } = props
     const [values, setValues] = useState({
         title: '',
         content: '',
+        color: '',
     })
     const { title, content } = values
     const nextId = useRef(6)
@@ -31,12 +30,11 @@ const Modal = props => {
         e.preventDefault()
         axios
             .post('http://localhost:5000/todo', {
-                title,
-                content,
-                date,
+                ...values,
+                date: +dayjs(),
             })
             .then(function (response) {
-                console.log(response.data)
+                addTodo(response.data)
             })
             .catch(function (error) {
                 console.log(error)
@@ -44,10 +42,12 @@ const Modal = props => {
         nextId.current += 1
         setValues('')
         close(false)
-        date.format('YYYY년MM월DD일')
     }
-    const onSelectColor = () => {
-        console.log('select color')
+    const onSelectColor = color => {
+        setValues({
+            ...values,
+            color: color,
+        })
     }
     return (
         <>

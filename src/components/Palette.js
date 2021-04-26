@@ -10,7 +10,7 @@ const Palette = props => {
                     style={{
                         background: index,
                     }}
-                    onClick={() => console.log(index)}
+                    onClick={() => onSelect(index)}
                 />
             ))}
         </div>

@@ -1,9 +1,9 @@
 import React from 'react'
 import Dropdown from './Dropdown'
 
-const TodoItem = ({ title, content, date, background, setTodos }) => {
+const TodoItem = ({ title, content, date, color, setTodos }) => {
     return (
-        <div className="item-wrapper" style={{ background: background }}>
+        <div className="item-wrapper" style={{ background: color }}>
             <div className="item-wrapper-header">
                 <div className="item-wrapper-title">
                     {title}

@@ -5,6 +5,9 @@ import TodoItemList from './components/TodoItemList'
 
 function App() {
     const [todos, setTodos] = useState([])
+    const addTodo = todo => {
+        setTodos(todos.concat(todo))
+    }
     const colors = [
         '#ffcfcf',
         '#ffa5a5',
@@ -15,7 +18,7 @@ function App() {
     ]
 
     return (
-        <TodoTemplate setTodos={setTodos} title="ToDo" colors={colors}>
+        <TodoTemplate addTodo={addTodo} title="ToDo" colors={colors}>
             <TodoItemList todos={todos} setTodos={setTodos} />
         </TodoTemplate>
     )
