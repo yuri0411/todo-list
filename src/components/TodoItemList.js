@@ -16,13 +16,16 @@ const TodoItemList = () => {
             })
     }, [])
     console.log(todos)
+
     return (
         <div>
-            {todos.map(item => (
+            {todos.map((item, id) => (
                 <TodoItem
+                    key={id}
                     title={item.title}
                     content={item.content}
                     date={item.date}
+                    background={item.background}
                 />
             ))}
         </div>

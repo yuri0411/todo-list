@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Dropdown from './Dropdown'
 
-const TodoItem = ({ id, title, content, date }) => {
+const TodoItem = ({ title, content, date, background }) => {
     return (
-        <div className="item-wrapper">
+        <div className="item-wrapper" style={{ background: background }}>
             <div className="item-wrapper-header">
                 <div className="item-wrapper-title">
                     {title}
