@@ -1,13 +1,6 @@
 {
   "todo": [
     {
-      "id": 1,
-      "title": "todo-1",
-      "content": "todo content-1",
-      "date": 1619141393803,
-      "background": "#ffcfcf"
-    },
-    {
       "id": 2,
       "title": "todo-2",
       "content": "todo content-2",
@@ -36,180 +29,26 @@
       "background": "#f1db9a"
     },
     {
+      "title": "ㅎㅇㅎㅇ",
+      "content": "ㅎㅇㅎㅇ",
+      "date": null,
       "id": 6
     },
     {
+      "title": "ㅇㅇㅇ",
+      "content": "ㅇㅇㅇ",
+      "date": null,
       "id": 7
     },
     {
-      "title": "sdfsd",
-      "content": "fsdf",
+      "title": "ㅇㄹㄴㅇㄹ",
+      "content": "ㄴㅇㄹㄴ",
+      "date": null,
       "id": 8
     },
     {
-      "title": "안녕하세요",
-      "content": "안녕하세요",
+      "date": null,
       "id": 9
-    },
-    {
-      "title": "dfs",
-      "content": "dfsdf",
-      "date": null,
-      "id": 10
-    },
-    {
-      "title": "sdfs",
-      "content": "sdfsdf",
-      "date": null,
-      "colors": [
-        "#ffcfcf",
-        "#ffa5a5",
-        "#5c969e",
-        "#3d7ea6",
-        "#f1db9a",
-        "#b1ccdb"
-      ],
-      "id": 11
-    },
-    {
-      "title": "ddd",
-      "content": "ddd",
-      "date": null,
-      "colors": [
-        "#ffcfcf",
-        "#ffa5a5",
-        "#5c969e",
-        "#3d7ea6",
-        "#f1db9a",
-        "#b1ccdb"
-      ],
-      "id": 12
-    },
-    {
-      "title": "",
-      "content": "",
-      "date": null,
-      "colors": [
-        "#ffcfcf",
-        "#ffa5a5",
-        "#5c969e",
-        "#3d7ea6",
-        "#f1db9a",
-        "#b1ccdb"
-      ],
-      "id": 13
-    },
-    {
-      "title": "",
-      "content": "",
-      "date": null,
-      "colors": [
-        "#ffcfcf",
-        "#ffa5a5",
-        "#5c969e",
-        "#3d7ea6",
-        "#f1db9a",
-        "#b1ccdb"
-      ],
-      "id": 14
-    },
-    {
-      "title": "",
-      "content": "",
-      "date": null,
-      "colors": [
-        "#ffcfcf",
-        "#ffa5a5",
-        "#5c969e",
-        "#3d7ea6",
-        "#f1db9a",
-        "#b1ccdb"
-      ],
-      "id": 15
-    },
-    {
-      "title": "",
-      "content": "",
-      "date": null,
-      "colors": [
-        "#ffcfcf",
-        "#ffa5a5",
-        "#5c969e",
-        "#3d7ea6",
-        "#f1db9a",
-        "#b1ccdb"
-      ],
-      "id": 16
-    },
-    {
-      "title": "",
-      "content": "",
-      "date": null,
-      "colors": [
-        "#ffcfcf",
-        "#ffa5a5",
-        "#5c969e",
-        "#3d7ea6",
-        "#f1db9a",
-        "#b1ccdb"
-      ],
-      "id": 17
-    },
-    {
-      "title": "",
-      "content": "",
-      "date": null,
-      "colors": [
-        "#ffcfcf",
-        "#ffa5a5",
-        "#5c969e",
-        "#3d7ea6",
-        "#f1db9a",
-        "#b1ccdb"
-      ],
-      "id": 18
-    },
-    {
-      "title": "",
-      "content": "",
-      "date": null,
-      "colors": [
-        "#ffcfcf",
-        "#ffa5a5",
-        "#5c969e",
-        "#3d7ea6",
-        "#f1db9a",
-        "#b1ccdb"
-      ],
-      "id": 19
-    },
-    {
-      "title": "ㅇㅇㅇ",
-      "content": "₩ㅇㅇㅇ",
-      "date": null,
-      "colors": [
-        "#ffcfcf",
-        "#ffa5a5",
-        "#5c969e",
-        "#3d7ea6",
-        "#f1db9a",
-        "#b1ccdb"
-      ],
-      "id": 20
-    },
-    {
-      "title": "hkh",
-      "content": "hhh",
-      "date": null,
-      "colors": [
-        "#ffcfcf",
-        "#ffa5a5",
-        "#5c969e",
-        "#3d7ea6",
-        "#f1db9a",
-        "#b1ccdb"
-      ],
-      "id": 21
     }
   ]
 }

@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import TodoItem from './TodoItem'
 import axios from 'axios'
 
-const TodoItemList = () => {
-    const [todos, setTodos] = useState([])
-
+const TodoItemList = props => {
+    const { todos, setTodos } = props
     useEffect(() => {
         axios
             .get('http://localhost:5000/todo')
@@ -26,6 +25,7 @@ const TodoItemList = () => {
                     content={item.content}
                     date={item.date}
                     background={item.background}
+                    setTodos={setTodos}
                 />
             ))}
         </div>

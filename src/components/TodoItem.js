@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Dropdown from './Dropdown'
 
-const TodoItem = ({ title, content, date, background }) => {
+const TodoItem = ({ title, content, date, background, setTodos }) => {
     return (
         <div className="item-wrapper" style={{ background: background }}>
             <div className="item-wrapper-header">
@@ -9,7 +9,7 @@ const TodoItem = ({ title, content, date, background }) => {
                     {title}
                     <div className="item-wrapper-date">{date}</div>
                 </div>
-                <Dropdown />
+                <Dropdown setTodos={setTodos} />
             </div>
             <div className="item-wrapper-content">{content}</div>
         </div>

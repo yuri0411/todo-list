@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { MdMoreHoriz } from 'react-icons/md'
 import axios from 'axios'
 
-const Dropdown = ({ selected }) => {
+const Dropdown = ({ selected, setTodos }) => {
     const list = [
         {
             item: '편집',
@@ -25,7 +25,7 @@ const Dropdown = ({ selected }) => {
         axios
             .delete('http://localhost:5000/todo')
             .then(function (response) {
-                console.log(response.data)
+                setTodos(response.data)
             })
             .catch(function (error) {
                 console.log(error)

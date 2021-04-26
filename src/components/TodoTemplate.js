@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Tabs from './Tabs'
-import Popover from './Modal'
+import Modal from './Modal'
 import { MdAdd } from 'react-icons/md'
 
-const TodoTemplate = ({ title, children }) => {
+const TodoTemplate = ({ title, children, setTodos, colors }) => {
     const [modalOpen, setModalOpen] = useState(false)
     const openModal = () => {
         setModalOpen(true)
@@ -23,7 +23,12 @@ const TodoTemplate = ({ title, children }) => {
                 <Tabs />
             </section>
             <section className="todo-wrapper-content">{children}</section>
-            <Popover open={modalOpen} close={closeModal} />
+            <Modal
+                open={modalOpen}
+                close={closeModal}
+                setTodos={setTodos}
+                colors={colors}
+            />
         </main>
     )
 }

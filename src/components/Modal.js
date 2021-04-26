@@ -2,18 +2,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import dayjs from 'dayjs'
 
-const colors = [
-    '#ffcfcf',
-    '#ffa5a5',
-    '#5c969e',
-    '#3d7ea6',
-    '#f1db9a',
-    '#b1ccdb',
-]
 const date = dayjs('')
 
-const Popover = props => {
-    const { open, close } = props
+const Modal = props => {
+    const { open, close, setTodos, colors } = props
     const [values, setValues] = useState({
         title: '',
         content: '',
@@ -36,13 +28,11 @@ const Popover = props => {
 
     const onSubmit = e => {
         e.preventDefault()
-
         axios
             .post('http://localhost:5000/todo', {
                 title,
                 content,
                 date,
-                colors,
             })
             .then(function (response) {
                 console.log(response.data)
@@ -53,6 +43,7 @@ const Popover = props => {
         nextId.current += 1
         setValues('')
         close(false)
+        date.format('YYYY년MM월DD일')
     }
 
     return (
@@ -67,6 +58,7 @@ const Popover = props => {
                                     style={{
                                         background: index,
                                     }}
+                                    onClick={() => console.log(index)}
                                 />
                             ))}
                         </div>
@@ -95,4 +87,4 @@ const Popover = props => {
     )
 }
 
-export default Popover
+export default Modal
