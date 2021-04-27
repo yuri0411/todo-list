@@ -1,105 +1,39 @@
 {
   "todo": [
     {
-      "id": 2,
-      "title": "todo-2",
-      "content": "todo content-2",
-      "date": 1619141462159,
-      "background": "#ffa5a5"
+      "title": "ㄷㄱㅈㄷㄱ",
+      "content": "ㅈㄷㄱㅈㄷ",
+      "color": "#3d7ea6",
+      "date": 1619484717515,
+      "id": 3
     },
     {
-      "id": 3,
-      "title": "todo-3",
-      "content": "todo content-3",
-      "date": 1619144488386,
-      "background": "#5c969e"
+      "title": "안녕",
+      "content": "안녕안녕",
+      "color": "",
+      "date": 1619484897937,
+      "id": 4
     },
     {
-      "id": 4,
-      "title": "todo-4",
-      "content": "todo content-4",
-      "date": 1619144525271,
-      "background": "#3d7ea6"
+      "title": "erwer",
+      "content": "werwer",
+      "color": "#ffcfcf",
+      "date": 1619486126957,
+      "id": 5
     },
     {
-      "title": "오늘 할 일",
-      "content": "todo content",
-      "date": 1619141393803,
-      "id": 5,
-      "background": "#f1db9a"
-    },
-    {
-      "title": "ㅎㅇㅎㅇ",
-      "content": "ㅎㅇㅎㅇ",
-      "date": null,
+      "title": "dddd",
+      "content": "ddddd",
+      "color": "#5c969e",
+      "date": 1619486858247,
       "id": 6
     },
     {
-      "title": "ㅇㅇㅇ",
-      "content": "ㅇㅇㅇ",
-      "date": null,
+      "color": "#f1db9a",
+      "title": "asdfa",
+      "content": "sdfasdf",
+      "date": 1619486862645,
       "id": 7
-    },
-    {
-      "title": "ㅇㄹㄴㅇㄹ",
-      "content": "ㄴㅇㄹㄴ",
-      "date": null,
-      "id": 8
-    },
-    {
-      "date": null,
-      "id": 9
-    },
-    {
-      "title": "니야러",
-      "content": "아앙",
-      "date": null,
-      "id": 10
-    },
-    {
-      "title": "dddd",
-      "content": "dddd",
-      "date": null,
-      "id": 11
-    },
-    {
-      "date": null,
-      "id": 12
-    },
-    {
-      "title": "abc",
-      "content": "aaa",
-      "date": null,
-      "id": 13
-    },
-    {
-      "title": "",
-      "content": "",
-      "date": null,
-      "id": 14
-    },
-    {
-      "date": null,
-      "id": 15
-    },
-    {
-      "color": "#3d7ea6",
-      "title": "ddd",
-      "content": "ddddddddd",
-      "id": 16
-    },
-    {
-      "color": "#5c969e",
-      "title": "dddd",
-      "content": "dddddd",
-      "id": 17
-    },
-    {
-      "color": "#ffa5a5",
-      "title": "ddddd",
-      "content": "dddddd",
-      "date": 1619455254544,
-      "id": 18
     }
   ]
 }

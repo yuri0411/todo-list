@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import axios from 'axios'
 import dayjs from 'dayjs'
 import Palette from './Palette'
@@ -11,7 +11,6 @@ const Modal = props => {
         color: '',
     })
     const { title, content } = values
-    const nextId = useRef(6)
 
     const onChange = e => {
         const { value, name } = e.target
@@ -39,7 +38,6 @@ const Modal = props => {
             .catch(function (error) {
                 console.log(error)
             })
-        nextId.current += 1
         setValues('')
         close(false)
     }

@@ -1,42 +1,21 @@
-import React, { useState } from 'react'
-const Tabs = () => {
-    const [activeTab, setActiveTab] = useState(0)
-    const content = [
-        {
-            id: 1,
-            tab: 'Today',
-            action: () => today(),
-        },
-        {
-            id: 2,
-            tab: 'This Week',
-            action: () => week(),
-        },
-        {
-            id: 3,
-            tab: 'This Month',
-            action: () => month(),
-        },
-    ]
-    const today = () => {
-        console.log('today')
-    }
-    const week = () => {
-        console.log('week')
-    }
-    const month = () => {
-        console.log('month')
-    }
-    const isOn = id => {
-        setActiveTab(id)
+import React from 'react'
+import { content } from '../App'
+
+const Tabs = ({ setActiveTab, activeTab }) => {
+    const isOn = section => {
+        setActiveTab(section)
     }
     return (
         <div className="tabs-wrapper">
-            {content.map((section, i) => (
+            {content.map(section => (
                 <div
-                    className={'tabs-wrapper-item'}
+                    className={
+                        section.id === activeTab.id
+                            ? 'tabs-wrapper-item active'
+                            : 'tabs-wrapper-item'
+                    }
                     key={section.id}
-                    onClick={section.action}
+                    onClick={() => isOn(section)}
                 >
                     {section.tab}
                 </div>

@@ -2,18 +2,20 @@ import React, { useState } from 'react'
 import { MdMoreHoriz } from 'react-icons/md'
 import axios from 'axios'
 
-const Dropdown = ({ selected, setTodos }) => {
+const Dropdown = ({ editTodo, delTodo, id }) => {
     const list = [
         {
             item: '편집',
             action: () => {
-                console.log('edit')
+                editTodo()
+                setOpenTooltip(false)
             },
         },
         {
             item: '삭제',
             action: () => {
-                onRemove()
+                onRemove(id)
+                setOpenTooltip(false)
             },
         },
     ]
@@ -21,11 +23,12 @@ const Dropdown = ({ selected, setTodos }) => {
     const tooltip = () => {
         setOpenTooltip(!openTooltip)
     }
-    const onRemove = () => {
+    const onRemove = id => {
         axios
-            .delete('http://localhost:5000/todo')
+            .delete(`http://localhost:5000/todo/${id}`)
+
             .then(function (response) {
-                setTodos(response.data)
+                delTodo(id)
             })
             .catch(function (error) {
                 console.log(error)

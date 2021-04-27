@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Palette = props => {
-    const { colors, color, onSelect } = props
+    const { colors, onSelect } = props
     return (
         <div className="color-picker">
             {colors.map(index => (

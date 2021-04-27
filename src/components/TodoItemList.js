@@ -3,7 +3,7 @@ import TodoItem from './TodoItem'
 import axios from 'axios'
 
 const TodoItemList = props => {
-    const { todos, setTodos } = props
+    const { todos, setTodos, delTodo, editTodd } = props
     useEffect(() => {
         axios
             .get('http://localhost:5000/todo')
@@ -21,11 +21,13 @@ const TodoItemList = props => {
             {todos.map((item, id) => (
                 <TodoItem
                     key={id}
+                    id={item.id}
                     title={item.title}
                     content={item.content}
                     date={item.date}
                     color={item.color}
-                    setTodos={setTodos}
+                    delTodo={delTodo}
+                    editTodo={editTodd}
                 />
             ))}
         </div>

@@ -3,7 +3,15 @@ import Tabs from './Tabs'
 import Modal from './Modal'
 import { MdAdd } from 'react-icons/md'
 
-const TodoTemplate = ({ title, children, addTodo, colors }) => {
+const TodoTemplate = ({
+    title,
+    children,
+    addTodo,
+    colors,
+    date,
+    setActiveTab,
+    activeTab,
+}) => {
     const [modalOpen, setModalOpen] = useState(false)
     const openModal = () => {
         setModalOpen(true)
@@ -11,6 +19,7 @@ const TodoTemplate = ({ title, children, addTodo, colors }) => {
     const closeModal = () => {
         setModalOpen(false)
     }
+
     return (
         <main className="todo-wrapper">
             <section className="todo-wrapper-header">
@@ -20,7 +29,11 @@ const TodoTemplate = ({ title, children, addTodo, colors }) => {
                         <MdAdd />
                     </button>
                 </div>
-                <Tabs />
+                <Tabs
+                    date={date}
+                    setActiveTab={setActiveTab}
+                    activeTab={activeTab}
+                />
             </section>
             <section className="todo-wrapper-content">{children}</section>
             <Modal
