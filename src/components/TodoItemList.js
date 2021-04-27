@@ -15,38 +15,35 @@ const TodoItemList = props => {
                 console.log(error)
             })
     }, [])
-    console.log(activeTab)
 
-    const todayZero = +dayjs()
-        .set('hour', 0)
-        .set('minutes', 0)
-        .set('seconds', 0)
-    const weekZero = +dayjs()
-        .subtract(6, 'day')
-        .set('hour', 0)
-        .set('minutes', 0)
-        .set('seconds', 0)
-    const monthZero = +dayjs()
-        .set('date', 1)
-        .set('hour', 0)
-        .set('minutes', 0)
-        .set('seconds', 0)
+    const filtered = item => {
+        const todayZero = +dayjs()
+            .set('hour', 0)
+            .set('minutes', 0)
+            .set('seconds', 0)
+        const weekZero = +dayjs()
+            .subtract(6, 'day')
+            .set('hour', 0)
+            .set('minutes', 0)
+            .set('seconds', 0)
+        const monthZero = +dayjs()
+            .set('date', 1)
+            .set('hour', 0)
+            .set('minutes', 0)
+            .set('seconds', 0)
 
-    // const filtered = todos => {
-    //     if (activeTab === 'ONE_DAY') {
-    //         todos.filter(todo => todo.date > todayZero)
-    //     } else if (activeTab === 'ONE_WEEK') {
-    //         todos.filter(todo => todo.date > weekZero)
-    //     } else if (activeTab === 'ONE_MONTH') {
-    //         todos.filter(todo => todo.date > monthZero)
-    //     }
-    // }
+        if (activeTab === 'ONE_DAY') {
+            console.log(item.date > todayZero)
+        } else if (activeTab === 'ONE_WEEK') {
+            console.log(item.date > weekZero)
+        } else if (activeTab === 'ONE_MONTH') {
+            console.log(item.date > monthZero)
+        }
+    }
     return (
         <div>
             {todos
-                .filter(
-                    item => activeTab === 'ONE_MONTH' && item.date > monthZero,
-                )
+                .filter(item => filtered(item.date))
                 .map((item, id) => (
                     <TodoItem
                         key={id}
