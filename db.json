@@ -36,17 +36,18 @@
       "id": 7
     },
     {
-      "title": "집에 가고싶다",
-      "content": "집에 보내주세영",
-      "date": 1619502483743,
-      "id": 8
-    },
-    {
       "title": "dfsdf",
       "content": "dfsdf",
       "color": "#ffa5a5",
       "date": 1619504542013,
       "id": 9
+    },
+    {
+      "title": "제목을 입력하세요",
+      "content": "내용을 입력하세요",
+      "color": "#b1ccdb",
+      "date": 1619533012797,
+      "id": 10
     }
   ]
 }

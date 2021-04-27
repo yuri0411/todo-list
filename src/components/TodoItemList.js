@@ -4,7 +4,7 @@ import axios from 'axios'
 import dayjs from 'dayjs'
 
 const TodoItemList = props => {
-    const { todos, setTodos, delTodo, editTodd, activeTab } = props
+    const { todos, setTodos, delTodo, editTodd, filterType } = props
     useEffect(() => {
         axios
             .get('http://localhost:5000/todo')
@@ -16,7 +16,7 @@ const TodoItemList = props => {
             })
     }, [])
 
-    const filtered = item => {
+    const filterByType = item => {
         const todayZero = +dayjs()
             .set('hour', 0)
             .set('minutes', 0)
@@ -32,18 +32,30 @@ const TodoItemList = props => {
             .set('minutes', 0)
             .set('seconds', 0)
 
-        if (activeTab === 'ONE_DAY') {
-            console.log(item.date > todayZero)
-        } else if (activeTab === 'ONE_WEEK') {
-            console.log(item.date > weekZero)
-        } else if (activeTab === 'ONE_MONTH') {
-            console.log(item.date > monthZero)
+        // switch (filterType) {
+        //     case 'ONE_DAY':
+        //         return item.date > todayZero;
+        //     case 'ONE_WEEK':
+        //         return item.date > weekZero
+        //     case 'ONE_MONTH':
+        //         return item.date > monthZero
+        //     default:
+        //         return item.date > todayZero
+        // }
+
+        if (filterType === 'ONE_DAY') {
+            return item.date > todayZero
+        } else if (filterType === 'ONE_WEEK') {
+            return item.date > weekZero
+        } else if (filterType === 'ONE_MONTH') {
+            return item.date > monthZero
         }
     }
+
     return (
         <div>
             {todos
-                .filter(item => filtered(item.date))
+                .filter(filterByType)
                 .map((item, id) => (
                     <TodoItem
                         key={id}
