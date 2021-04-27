@@ -52,7 +52,7 @@ function App() {
             colors={colors}
         >
             <TodoItemList
-                filter={activeTab.type}
+                activeTab={activeTab.type}
                 todos={todos}
                 setTodos={setTodos}
                 delTodo={delTodo}
