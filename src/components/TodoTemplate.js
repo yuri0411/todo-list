@@ -11,14 +11,17 @@ const TodoTemplate = ({
     date,
     setActiveTab,
     activeTab,
+    open,
+    openModal,
+    closeModal,
 }) => {
-    const [modalOpen, setModalOpen] = useState(false)
-    const openModal = () => {
-        setModalOpen(true)
-    }
-    const closeModal = () => {
-        setModalOpen(false)
-    }
+    // const [modalOpen, setModalOpen] = useState(false)
+    // const openModal = () => {
+    //     setModalOpen(true)
+    // }
+    // const closeModal = () => {
+    //     setModalOpen(false)
+    // }
 
     return (
         <main className="todo-wrapper">
@@ -37,7 +40,7 @@ const TodoTemplate = ({
             </section>
             <section className="todo-wrapper-content">{children}</section>
             <Modal
-                open={modalOpen}
+                open={open}
                 close={closeModal}
                 addTodo={addTodo}
                 colors={colors}

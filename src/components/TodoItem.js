@@ -2,7 +2,18 @@ import React from 'react'
 import Dropdown from './Dropdown'
 import dayjs from 'dayjs'
 
-const TodoItem = ({ id, title, content, date, color, delTodo, editTodo }) => {
+const TodoItem = ({
+    id,
+    title,
+    content,
+    date,
+    color,
+    delTodo,
+    editTodo,
+    open,
+    openModal,
+    closeModal,
+}) => {
     return (
         <div className="item-wrapper" style={{ background: color }}>
             <div className="item-wrapper-header">
@@ -12,7 +23,14 @@ const TodoItem = ({ id, title, content, date, color, delTodo, editTodo }) => {
                         {dayjs(date).format('YYYY년MM월DD일')}
                     </div>
                 </div>
-                <Dropdown delTodo={delTodo} editTodo={editTodo} id={id} />
+                <Dropdown
+                    delTodo={delTodo}
+                    editTodo={editTodo}
+                    id={id}
+                    open={open}
+                    openModal={openModal}
+                    closeModal={closeModal}
+                />
             </div>
             <div className="item-wrapper-content">{content}</div>
         </div>

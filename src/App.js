@@ -24,6 +24,7 @@ export const content = [
 function App() {
     const [todos, setTodos] = useState([])
     const [activeTab, setActiveTab] = useState(content[0])
+    const [modalOpen, setModalOpen] = useState(false)
 
     const addTodo = todo => {
         setTodos(todos.concat(todo))
@@ -43,6 +44,13 @@ function App() {
         '#b1ccdb',
     ]
 
+    const openModal = () => {
+        setModalOpen(true)
+    }
+    const closeModal = () => {
+        setModalOpen(false)
+    }
+
     return (
         <TodoTemplate
             setActiveTab={setActiveTab}
@@ -50,6 +58,9 @@ function App() {
             addTodo={addTodo}
             title="ToDo"
             colors={colors}
+            open={modalOpen}
+            openModal={openModal}
+            closeModal={closeModal}
         >
             <TodoItemList
                 filterType={activeTab.type}
@@ -57,6 +68,9 @@ function App() {
                 setTodos={setTodos}
                 delTodo={delTodo}
                 editTodd={editTodo}
+                open={modalOpen}
+                openModal={openModal}
+                closeModal={closeModal}
             />
         </TodoTemplate>
     )

@@ -4,7 +4,16 @@ import axios from 'axios'
 import dayjs from 'dayjs'
 
 const TodoItemList = props => {
-    const { todos, setTodos, delTodo, editTodd, filterType } = props
+    const {
+        todos,
+        setTodos,
+        delTodo,
+        editTodd,
+        filterType,
+        openModal,
+        closeModal,
+        open,
+    } = props
     useEffect(() => {
         axios
             .get('http://localhost:5000/todo')
@@ -54,20 +63,21 @@ const TodoItemList = props => {
 
     return (
         <div>
-            {todos
-                .filter(filterByType)
-                .map((item, id) => (
-                    <TodoItem
-                        key={id}
-                        id={item.id}
-                        title={item.title}
-                        content={item.content}
-                        date={item.date}
-                        color={item.color}
-                        delTodo={delTodo}
-                        editTodo={editTodd}
-                    />
-                ))}
+            {todos.filter(filterByType).map((item, id) => (
+                <TodoItem
+                    key={id}
+                    id={item.id}
+                    title={item.title}
+                    content={item.content}
+                    date={item.date}
+                    color={item.color}
+                    delTodo={delTodo}
+                    editTodo={editTodd}
+                    open={open}
+                    openModal={openModal}
+                    closeModal={closeModal}
+                />
+            ))}
         </div>
     )
 }
