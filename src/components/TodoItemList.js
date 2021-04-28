@@ -2,17 +2,21 @@ import React, { useEffect } from 'react'
 import TodoItem from './TodoItem'
 import axios from 'axios'
 import dayjs from 'dayjs'
+import ModalTemplate from './ModalTemplate'
 
 const TodoItemList = props => {
     const {
         todos,
         setTodos,
         delTodo,
-        editTodd,
+        colors,
         filterType,
         openModal,
         closeModal,
         open,
+        onEdit,
+        selectedTodo,
+        updateTodo,
     } = props
     useEffect(() => {
         axios
@@ -60,24 +64,26 @@ const TodoItemList = props => {
             return item.date > monthZero
         }
     }
-
     return (
         <div>
             {todos.filter(filterByType).map((item, id) => (
                 <TodoItem
+                    {...item}
                     key={id}
-                    id={item.id}
-                    title={item.title}
-                    content={item.content}
-                    date={item.date}
-                    color={item.color}
                     delTodo={delTodo}
-                    editTodo={editTodd}
-                    open={open}
+                    onEdit={onEdit}
                     openModal={openModal}
-                    closeModal={closeModal}
                 />
             ))}
+            {selectedTodo && open && (
+                <ModalTemplate
+                    close={closeModal}
+                    onEdit={onEdit}
+                    colors={colors}
+                    selectedTodo={selectedTodo}
+                    updateTodo={updateTodo}
+                />
+            )}
         </div>
     )
 }

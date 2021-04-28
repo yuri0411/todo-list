@@ -3,17 +3,17 @@ import Dropdown from './Dropdown'
 import dayjs from 'dayjs'
 
 const TodoItem = ({
-    id,
-    title,
-    content,
-    date,
-    color,
+    // id,
+    // title,
+    // content,
+    // date,
+    // color,
     delTodo,
-    editTodo,
-    open,
+    onEdit,
     openModal,
-    closeModal,
+    ...item
 }) => {
+    const { id, title, content, date, color } = item
     return (
         <div className="item-wrapper" style={{ background: color }}>
             <div className="item-wrapper-header">
@@ -25,11 +25,9 @@ const TodoItem = ({
                 </div>
                 <Dropdown
                     delTodo={delTodo}
-                    editTodo={editTodo}
-                    id={id}
-                    open={open}
+                    onEdit={onEdit}
+                    todo={item}
                     openModal={openModal}
-                    closeModal={closeModal}
                 />
             </div>
             <div className="item-wrapper-content">{content}</div>

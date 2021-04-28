@@ -1,22 +1,20 @@
 import React, { useState } from 'react'
 import { MdMoreHoriz } from 'react-icons/md'
 import axios from 'axios'
-import Modal from './Modal'
 
-const Dropdown = ({ editTodo, delTodo, id, open, openModal, closeModal }) => {
+const Dropdown = ({ delTodo, todo, openModal }) => {
     const list = [
         {
             item: '편집',
             action: () => {
                 setOpenTooltip(false)
-                openModal()
-                return <Modal open={open} closeModal={closeModal} />
+                openModal(todo)
             },
         },
         {
             item: '삭제',
             action: () => {
-                onRemove(id)
+                onRemove(todo.id)
                 setOpenTooltip(false)
             },
         },
